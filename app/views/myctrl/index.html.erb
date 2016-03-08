@@ -1,26 +1,10 @@
-
 <!doctype html>
 <html ng-app="ngMap">
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
 
 <head>
-<style>
-	table {
-    border-collapse: collapse;
-    width: 100%;
-	}
-
-	th, td {
-    text-align: left;
-    padding: 4px;
-	}
-
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-    background-color: #4CAF50;
-    color: white;
-}
-</style>
 
 </head>
   <head>
@@ -72,10 +56,26 @@ th {
 <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
-    <div ng-app="formExample" ng-controller="MyCtrl">
+
+
+<div align="center"  ng-app="formExample" ng-controller="MyCtrl">
 <form novalidate class="simple-form">
-    Search:<input ng-model="query" type="text"/>
-<input type="submit" ng-click="update()" value="Search"></input>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1>CSE 5335 PROJECT 1</h1>
+			<h2>Brought to you by Priya Aphale pxa1717</h2>
+			<br/><br/>
+			<input class="button button2" type="submit" ng-click="update()" value="Load Data"></input> 
+		</div>
+		
+	</div>
+</div>
+    
+<br/><br/>
+<input  ng-model="query" type="text" placeholder="Search.."></input>
+
+<br/></br>
 
 
 <table>
@@ -85,6 +85,7 @@ th {
         <th>Latitude</th>
         <th>Longitude</th>
       </tr>
+
       <tr ng-repeat="i in items| filter:query">
         <td>{{i.name}} </td>
         <td>{{i.rank}}</td>
@@ -95,15 +96,13 @@ th {
  
    </form>   
    </div>
-    <div ng-controller="MyCtrl" class="ng-scope">
+    <br/>
+<div ng-controller="MyCtrl" class="ng-scope">
       <map zoom="3" center="[42.357044, -71.092860]">
         <marker ng-repeat="p in positions" 
           position="{{p}}" title="{{p.toString()}}">
         </marker>
       </map>
-	
-      <br/>
-    </div>
-
+</div>
   </body>
 </html>
