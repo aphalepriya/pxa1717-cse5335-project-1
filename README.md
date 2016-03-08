@@ -58,9 +58,12 @@ $ git push heroku master
 $ heroku open 
 
 References:
-[http://www.w3schools.com/angular/](http://www.w3schools.com/angular/)
-[http://templated.co/](http://templated.co/)
-[https://gist.github.com/JennDudley/2493288](https://gist.github.com/JennDudley/2493288)
+[http://www.w3schools.com/angular/](http://www.w3schools.com/angular/) 
+
+[http://templated.co/](http://templated.co/) 
+
+[https://gist.github.com/JennDudley/2493288](https://gist.github.com/JennDudley/2493288) 
+
 And other tutorials on internet
 
 
