@@ -42,20 +42,13 @@ heroku create
 
 
 $ git init  
-
 $ git add .   
-
-$ git commit -m "Initial commit"   
-
-$ git remote add origin git@github.com:username/new_app.git 
- 
-$ git push -u origin master 
-
-$ heroku create --stack cedar 
-
-$ git push heroku master  
-
-$ heroku open 
+$ git commit -m "Initial commit" 
+$ git remote add origin git@github.com:<username>/<new_app>.git 
+$ git push -u origin master
+$ heroku create --stack cedar
+$ git push heroku master 
+$ heroku open
 
 
 
