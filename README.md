@@ -33,18 +33,23 @@ if any, and if so, what is their purpose for your solution?
 
 ### What Ubuntu commands are required to deploy and run your server? 
 
-** Ubuntu commands required to run the rails server are: **
-'rails server'
+*Ubuntu commands required to run the rails server are: **
+$'rails server'
 This command starts the rails server and the application can be view at localhost:3000
 
-** For Heroku deployment, the following command sequence needs to be followed**
+*For Heroku deployment, the following command sequence needs to be followed**
 heroku create
 
-git push heroku master
 
-heroku run rake db:migrate
+$ git init  
+$ git add .   
+$ git commit -m "Initial commit" 
+$ git remote add origin git@github.com:<username>/<new_app>.git 
+$ git push -u origin master
+$ heroku create --stack cedar
+$ git push heroku master 
+$ heroku open
 
-heroku open
 
 
 
